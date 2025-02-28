@@ -1,15 +1,71 @@
-<!DOCTYPE html>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+
+    <!-- Internal CSS for Styling -->
+    <style>
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid black;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        tr:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <!-- Table Content -->
+    <table id="student-table">
+        <caption>Student Information</caption>
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Internal JavaScript -->
+    <script>
+        // JavaScript to add an event listener on rows
+        document.querySelectorAll('#student-table tbody tr').forEach(row => {
+            row.addEventListener('click', () => {
+                alert('You clicked on row with Roll Number: ' + row.cells[0].textContent);
+            });
+        });
+    </script>
 
 </body>
 
