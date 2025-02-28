@@ -22,15 +22,7 @@
             border: 1px solid black;
         }
 
-        caption {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        tr:hover {
-            background-color: lightgray;
-            cursor: pointer;
-        }
+        
     </style>
 </head>
 
@@ -58,14 +50,7 @@
     </table>
 
     <!-- Internal JavaScript -->
-    <script>
-        // JavaScript to add an event listener on rows
-        document.querySelectorAll('#student-table tbody tr').forEach(row => {
-            row.addEventListener('click', () => {
-                alert('You clicked on row with Roll Number: ' + row.cells[0].textContent);
-            });
-        });
-    </script>
+   
 
 </body>
 
